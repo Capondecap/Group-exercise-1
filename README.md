@@ -69,13 +69,21 @@ Ensure your objects follow this structure:
 
 
 ```json
-src/
- ├── pages/
- │     ├── Dashboard.jsx
- │     ├── Detail.jsx
- ├── components/
- │     ├── UploadForm.jsx
- ├── services/
- │     ├── api.js
- ├── App.jsx
+project/
+│
+├── app.js
+├── package.json
+│
+├── /views
+│   ├── layouts/
+│   │     └── main.hbs
+│   ├── partials/
+│   │     ├── header.hbs
+│   │     └── footer.hbs
+│   ├── report.hbs
+│   ├── dashboard.hbs
+│   └── detail.hbs
+│
+└── /public
+    └── /uploads
 ```
