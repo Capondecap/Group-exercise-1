@@ -32,21 +32,33 @@ router.post("/report", (req, res) => {
   });
 
   form.parse(req, (err, fields, files) => {
-    if (err) return res.redirect("/report");
 
-    const name = fields.name?.[0];
-    const description = fields.description?.[0];
-    const location = fields.location?.[0];
-    const date = fields.date?.[0];
-    const contact = fields.contact?.[0];
+    if (err) {
+      return res.redirect("/report");
+    }
+
+    const name = fields.name?.[0]?.trim();
+    const description = fields.description?.[0]?.trim();
+    const location = fields.location?.[0]?.trim();
+    const date = fields.date?.[0]?.trim();
+    const contact = fields.contact?.[0]?.trim();
     const imageFile = files.image?.[0];
 
+    // 🔐 Strict backend validation
     if (!name || !description || !location || !date || !contact || !imageFile) {
+
+      // remove uploaded temp file if exists
+      if (imageFile?.path && fs.existsSync(imageFile.path)) {
+        fs.unlinkSync(imageFile.path);
+      }
+
       return res.redirect("/report");
     }
 
     const allowedTypes = ["image/jpeg", "image/png", "image/webp"];
+
     if (!allowedTypes.includes(imageFile.headers["content-type"])) {
+
       fs.unlinkSync(imageFile.path);
       return res.redirect("/report");
     }
