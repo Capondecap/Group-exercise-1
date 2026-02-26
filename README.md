@@ -66,3 +66,15 @@ Ensure your objects follow this structure:
 - **00:40 - 01:05:** **Sprint B:** Build Dashboard Table and URL Parameter route (`/items/:id`).
 - **01:05 - 01:20:** **Sprint C:** Add Status Update logic and Delete functionality.
 - **01:20 - 01:30:** Final UI Polish & PR Merges.
+
+
+
+src/
+ ├── pages/
+ │     ├── Dashboard.jsx
+ │     ├── Detail.jsx
+ ├── components/
+ │     ├── UploadForm.jsx
+ ├── services/
+ │     ├── api.js
+ ├── App.jsx
