@@ -1,0 +1,26 @@
+{
+  "name": "group-exercise-1",
+  "version": "1.0.0",
+  "description": "- **Engine:** Node.js + Express.js.\r - **View Engine:** Handlebars (`hbs` or `express-handlebars`).\r     - *Requirement:* Must use a `main.hbs`layout with `header` and `footer` partials.\r - **Security:** Middleware to disable `x-powered-by`.\r - **Persistence:** In-memory storage (Global Array).\r - **File Handling:** Implement `multiparty`to handle item image uploads to a `/public/uploads` directory.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Capondecap/Group-exercise-1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Capondecap/Group-exercise-1/issues"
+  },
+  "homepage": "https://github.com/Capondecap/Group-exercise-1#readme",
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "express-handlebars": "^8.0.6"
+  }
+}
