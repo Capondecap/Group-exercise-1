@@ -66,3 +66,24 @@ Ensure your objects follow this structure:
 - **00:40 - 01:05:** **Sprint B:** Build Dashboard Table and URL Parameter route (`/items/:id`).
 - **01:05 - 01:20:** **Sprint C:** Add Status Update logic and Delete functionality.
 - **01:20 - 01:30:** Final UI Polish & PR Merges.
+
+
+```json
+project/
+│
+├── app.js
+├── package.json
+│
+├── /views
+│   ├── layouts/
+│   │     └── main.hbs
+│   ├── partials/
+│   │     ├── header.hbs
+│   │     └── footer.hbs
+│   ├── report.hbs
+│   ├── dashboard.hbs
+│   └── detail.hbs
+│
+└── /public
+    └── /uploads
+```
